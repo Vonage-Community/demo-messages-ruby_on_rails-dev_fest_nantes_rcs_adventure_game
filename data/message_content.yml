@@ -1,14 +1,21 @@
 en:
   step_zero:
-    title: "Quick question"
-    text: "Do you like this picture?"
-    media_url: '/img/NationalGeographic_2572187_16x9.jpg'
+    title: "An answer is needed"
+    text: |
+      Queen Elira looks at you solemnly. The fate of Eldrathia rests in your hands. Will you accept this quest?\n
+      Accept the quest and travel with Lira and Tharos to the Echoing Peaks\n
+      Ask for more time to prepare before leaving\n
+      Refuse the quest — it's too dangerous
+    media_url: '/img/message-media/step-zero.png'
     suggestions:
       - type: "reply"
-        text: "Yes"
+        text: "Accept"
         postback_data: "en-step_one"
       - type: "reply"
-        text: "No"
+        text: "Ask for more time"
+        postback_data: "en-step_twelve"
+      - type: "reply"
+        text: "Refuse the quest"
         postback_data: "en-step_two"
   step_one:
     title: "Great!"
