@@ -1,0 +1,54 @@
+en:
+  step_zero:
+    title: "Quick question"
+    text: "Do you like this picture?"
+    media_url: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg'
+    suggestions:
+      - type: "reply"
+        text: "Yes"
+        postback_data: "en-step_one"
+      - type: "reply"
+        text: "No"
+        postback_data: "en-step_two"
+  step_one:
+    title: "Great!"
+    text: "I'm glad you like it! Here's another one."
+    media_url: '/img/black-dragon-at-beach.jpg'
+  step_two:
+    title: "Really?"
+    text: "It's a great picture! Don't you think?"
+    media_url: '/img/NationalGeographic_2572187_16x9.jpg'
+    suggestions:
+      - type: "reply"
+        text: "Yes"
+        postback_data: "en-step_one"
+      - type: "reply"
+        text: "No"
+        postback_data: "en-step_two"
+fr:
+  step_zero:
+    title: "Petite question"
+    text: "Aimez-vous cette image?"
+    media_url: '/img/NationalGeographic_2572187_16x9.jpg'
+    suggestions:
+      - type: "reply"
+        text: "Oui"
+        postback_data: "fr-step_one"
+      - type: "reply"
+        text: "Non"
+        postback_data: "fr-step_two"
+  step_one:
+    title: "Super!"
+    text: "Je suis content que ça vous plaise ! En voici une autre."
+    media_url: '/img/black-dragon-at-beach.jpg'
+  step_two:
+    title: "Vraiment?"
+    text: "C'est une belle image ! N'est-ce pas?"
+    media_url: '/img/NationalGeographic_2572187_16x9.jpg'
+    suggestions:
+      - type: "reply"
+        text: "Oui"
+        postback_data: "fr-step_one"
+      - type: "reply"
+        text: "Non"
+        postback_data: "fr-step_two"

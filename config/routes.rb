@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get "games/show"
+  get "games/new"
+  post "games/create"
+  get "players/new"
+  post "players/create"
+  post "inbound_messages/create"
+  post "status_messages/create"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -10,5 +17,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "players#new"
 end
