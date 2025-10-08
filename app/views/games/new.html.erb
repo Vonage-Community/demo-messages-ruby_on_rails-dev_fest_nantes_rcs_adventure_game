@@ -1,6 +1,6 @@
 <h1>Games#new</h1>
 <p>Welcome <%= @name %>!</p>
 
-<%= form_with url: games_create_path do |form| %>
+<%= form_with url: games_path do |form| %>
   <%= form.submit "Start Game" %>
 <% end %>

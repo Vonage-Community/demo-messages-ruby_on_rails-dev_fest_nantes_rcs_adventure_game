@@ -1,6 +1,6 @@
 <h1>Player#new</h1>
-
-<%= form_with url: players_create_path do |form| %>
+<h1><%= t :hello %></h1>
+<%= form_with url: players_path do |form| %>
   <%= form.label :name, "Name" %>
   <%= form.text_field :name, required: true %>
   <%= form.submit "Create Player" %>

@@ -4,6 +4,6 @@ class PlayersController < ApplicationController
 
   def create
     session[:name] = params[:name]
-    redirect_to games_new_path
+    redirect_to new_game_path
   end
 end

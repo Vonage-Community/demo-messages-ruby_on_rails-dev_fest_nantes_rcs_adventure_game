@@ -2,7 +2,7 @@ en:
   step_zero:
     title: "Quick question"
     text: "Do you like this picture?"
-    media_url: 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg'
+    media_url: '/img/NationalGeographic_2572187_16x9.jpg'
     suggestions:
       - type: "reply"
         text: "Yes"

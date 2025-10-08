@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def show
-    @name = session[:name]
+    @name = params[:id]
   end
 
   def new
@@ -9,13 +9,13 @@ class GamesController < ApplicationController
 
   def create
     p 'Starting game for player: ' + session[:name]
-    message = MessagesCreator.new('fr-step_zero').create_message
+    message = MessagesCreator.new("#{I18n.locale.to_s}-step_zero").create_message
 
     Vonage.messaging.send(
       from: ENV['RCS_SENDER_ID'],
       to: ENV['MESSAGES_TO_NUMBER'],
       **message
     )
-    redirect_to games_show_path
+    redirect_to game_path(session[:name])
   end
 end
