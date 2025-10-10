@@ -2,14 +2,14 @@ en:
   step_zero:
     title: "An answer is needed"
     text: |
-      Queen Elira looks at you solemnly. The fate of Eldrathia rests in your hands. Will you accept this quest?\n
-      Accept the quest and travel with Lira and Tharos to the Echoing Peaks\n
-      Ask for more time to prepare before leaving\n
-      Refuse the quest — it's too dangerous
+      Queen Elira looks at you solemnly. The fate of Eldrathia rests in your hands. Will you accept this quest?
+      • Accept the quest and travel with Lira and Tharos to the Echoing Peaks
+      • Ask for more time to prepare before leaving
+      • Refuse the quest — it's too dangerous
     media_url: '/img/message-media/step-zero.png'
     suggestions:
       - type: "reply"
-        text: "Accept"
+        text: "Accept the quest"
         postback_data: "en-step_one"
       - type: "reply"
         text: "Ask for more time"
@@ -18,44 +18,949 @@ en:
         text: "Refuse the quest"
         postback_data: "en-step_two"
   step_one:
-    title: "Great!"
-    text: "I'm glad you like it! Here's another one."
-    media_url: '/img/black-dragon-at-beach.jpg'
-  step_two:
-    title: "Really?"
-    text: "It's a great picture! Don't you think?"
-    media_url: '/img/NationalGeographic_2572187_16x9.jpg'
+    title: "Into the Wilds"
+    text: |
+      You begin your journey with Lira the unicorn and Tharos the dragon. You reach a fork in the road.
+      • Left: Through the Silver Forest, where illusions trick travelers.
+      • Right: Over the Windblown Cliffs, where storms never cease.
+      • Straight ahead: Across the Misty Marshes, said to hide secret paths.
+    media_url: '/img/message-media/step-one.png'
     suggestions:
       - type: "reply"
-        text: "Yes"
+        text: "Silver Forest"
+        postback_data: "en-step_three"
+      - type: "reply"
+        text: "Windblown Cliffs"
+        postback_data: "en-step_four"
+      - type: "reply"
+        text: "Misty Marshes"
+        postback_data: "en-step_thirteen"
+  step_two:
+    title: "Coward's Choice"
+    text: |
+      You decline. The queen's eyes darken.
+      That night, Varnak's shadows engulf the castle. Without a hero, the land falls into ruin.
+      You live, but Eldrathia does not.
+      THE END
+      Would you like to try again?
+    media_url: '/img/message-media/step-two.png'
+    suggestions:
+      - type: "reply"
+        text: "Return to Start"
+        postback_data: "en-step_one"
+  step_three:
+    title: "Silver Forest"
+    text: |
+      The trees whisper your fears. You see visions of your worst memories.
+      • Use Lira's horn to dispel the illusions.
+      • Fight the visions with your magic.
+      • Close your eyes and trust Tharos to guide you safely through.
+    media_url: '/img/message-media/step-three.png'
+    suggestions:
+      - type: "reply"
+        text: "Use Lira's horn"
+        postback_data: "en-step_five"
+      - type: "reply"
+        text: "Fight with magic"
+        postback_data: "en-step_six"
+      - type: "reply"
+        text: "Trust Tharos"
+        postback_data: "en-step_fourteen"
+  step_four:
+    title: "Windblown Cliffs"
+    text: |
+      Winds howl around you. Tharos struggles to fly.
+      Suddenly, shadow creatures attack from the sky.
+      • Let Tharos fight while you cast protection spells.
+      • Command the wind with a forbidden spell.
+      • Land quickly and hide in a nearby cave until the storm passes.
+    media_url: '/img/message-media/step-four.png'
+    suggestions:
+      - type: "reply"
+        text: "Tharos fights"
+        postback_data: "en-step_seven"
+      - type: "reply"
+        text: "Forbidden spell"
+        postback_data: "en-step_eight"
+      - type: "reply"
+        text: "Hide in cave"
+        postback_data: "en-step_fifteen"
+  step_five:
+    title: "Light of Truth"
+    text: |
+      Lira's horn glows with pure light. The illusions shatter.
+      You remember your purpose. The path forward clears.
+      • Press onward toward the Echoing Peaks.
+      • Pause to gather magical herbs that may help you later.
+    media_url: '/img/message-media/step-five.png'
+    suggestions:
+      - type: "reply"
+        text: "Press onward"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Gather herbs"
+        postback_data: "en-step_sixteen"
+  step_six:
+    title: "Magical Backlash"
+    text: |
+      You cast a spell — but the forest turns it back on you! You're trapped in your worst fear, endlessly looping.
+      THE END
+      Would you like to try a different path?
+    media_url: '/img/message-media/step-six.png'
+    suggestions:
+      - type: "reply"
+        text: "Return to Silver Forest"
+        postback_data: "en-step_three"
+  step_seven:
+    title: "Sky Duel"
+    text: |
+      Tharos unleashes fire, and you shield the group with your spells. The shadow beasts retreat.
+      Tharos nods in respect. “You're braver than you look.”
+      • Continue toward the mountain.
+      • Investigate the shadow beasts' origin.
+    media_url: '/img/message-media/step-seven.png'
+    suggestions:
+      - type: "reply"
+        text: "Continue"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Investigate"
+        postback_data: "en-step_seventeen"
+  step_eight:
+    title: "Forbidden Magic"
+    text: |
+      You chant an ancient incantation. The wind obeys — but you lose a piece of your soul.
+      You reach the mountain, but feel... hollow.
+      • Attempt to re-ignite your spirit with Lira's help.
+      • Push forward despite the emptiness.
+    media_url: '/img/message-media/step-eight.png'
+    suggestions:
+      - type: "reply"
+        text: "Re-ignite spirit"
+        postback_data: "en-step_eighteen"
+      - type: "reply"
+        text: "Push forward"
+        postback_data: "en-step_nine"
+  step_nine:
+    title: "The Echoing Peaks"
+    text: |
+      At last, you reach the mountain. The Flame Crystal pulses inside.
+      But Varnak appears in a swirl of shadow!
+      • Let Lira charge Varnak while you retrieve the crystal.
+      • Face Varnak directly while Tharos distracts him.
+      • Attempt to negotiate with Varnak, appealing to any remaining humanity.
+    media_url: '/img/message-media/step-nine.png'
+    suggestions:
+      - type: "reply"
+        text: "Lira charges"
+        postback_data: "en-step_ten"
+      - type: "reply"
+        text: "Face Varnak"
+        postback_data: "en-step_eleven"
+      - type: "reply"
+        text: "Negotiate"
+        postback_data: "en-step_nineteen"
+  step_ten:
+    title: "Unicorn's Valor"
+    text: |
+      Lira bravely charges — but Varnak is too strong. He strikes her down.
+      You grab the crystal and cast a desperate spell. The Heartfire reignites… but Lira is lost.
+      Eldrathia is saved, but at a cost.
+      THE END
+    media_url: '/img/message-media/step-ten.png'
+  step_eleven:
+    title: "Final Stand"
+    text: |
+      You stand your ground. Varnak hurls dark magic. Tharos flies above, breathing fire.
+      You channel the power of the Flame Crystal and shout the ancient incantation.
+      Blinding light erupts. Varnak screams — and is banished forever.
+      Lira and Tharos stand beside you. The land is saved, and you are hailed as a true wizard of Eldrathia.
+      ✨ Victory! ✨
+      THE END
+    media_url: '/img/message-media/step-eleven.png'
+  step_twelve:
+    title: "Preparation Time"
+    text: |
+      You ask for time to prepare. Queen Elira grants you three choices for your supplies:
+      • Take extra potions of healing and strength.
+      • Gather ancient scrolls of powerful spells.
+      • Request a magical map that reveals hidden dangers.
+    media_url: '/img/message-media/step-twelve.png'
+    suggestions:
+      - type: "reply"
+        text: "Potions"
         postback_data: "en-step_one"
       - type: "reply"
-        text: "No"
-        postback_data: "en-step_two"
+        text: "Scrolls"
+        postback_data: "en-step_one"
+      - type: "reply"
+        text: "Magical map"
+        postback_data: "en-step_one"
+  step_thirteen:
+    title: "Misty Marshes"
+    text: |
+      The marshes are thick with fog and strange sounds.
+      • Follow glowing will-o'-the-wisps to find a shortcut.
+      • Use a rope to cross the quicksand-filled areas cautiously.
+      • Call upon Tharos to fly above the marshes.
+    media_url: '/img/message-media/step-thirteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Follow the wisps"
+        postback_data: "en-step_twenty"
+      - type: "reply"
+        text: "Use rope"
+        postback_data: "en-step_twenty_one"
+      - type: "reply"
+        text: "Fly with Tharos"
+        postback_data: "en-step_four"
+  step_fourteen:
+    title: "Trust in Tharos"
+    text: |
+      You close your eyes and trust Tharos's instincts. With a mighty roar, he leads you safely through.
+      • Thank Tharos and press forward.
+      • Suggest resting at a clearing nearby.
+    media_url: '/img/message-media/step-fourteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Thank Tharos"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Rest at clearing"
+        postback_data: "en-step_twenty_two"
+  step_fifteen:
+    title: "Storm Shelter"
+    text: |
+      You find a hidden cave. Inside, ancient runes glow faintly on the walls.
+      • Study the runes for magical insight.
+      • Rest and wait for the storm to pass.
+    media_url: '/img/message-media/step-fifteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Study the runes"
+        postback_data: "en-step_twenty_three"
+      - type: "reply"
+        text: "Rest"
+        postback_data: "en-step_nine"
+  step_sixteen:
+    title: "Gathering Herbs"
+    text: |
+      You collect rare herbs that enhance magical strength.
+      • Use the herbs to boost your spells now.
+      • Save the herbs for a possible future need.
+    media_url: '/img/message-media/step-sixteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Use herbs now"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Save herbs"
+        postback_data: "en-step_nine"
+  step_seventeen:
+    title: "Shadow's Origin"
+    text: |
+      You track the shadow beasts to a cursed shrine.
+      • Attempt to cleanse the shrine with a purification spell.
+      • Destroy the shrine with Tharos's fire.
+    media_url: '/img/message-media/step-seventeen.png'
+    suggestions:
+      - type: "reply"
+        text: "Cleanse shrine"
+        postback_data: "en-step_twenty_four"
+      - type: "reply"
+        text: "Destroy shrine"
+        postback_data: "en-step_twenty_five"
+  step_eighteen:
+    title: "Renewal"
+    text: |
+      Lira's touch rekindles your fading spirit.
+      • With renewed strength, confront Varnak.
+      • Feel grateful but cautious, and scout the mountain first.
+    media_url: '/img/message-media/step-eighteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Confront Varnak"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Scout mountain"
+        postback_data: "en-step_twenty_six"
+  step_nineteen:
+    title: "Negotiation"
+    text: |
+      You speak to Varnak, appealing to the wizard you once knew. Varnak laughs and attacks without mercy.
+      • Offer a truce and surrender of the Flame Crystal.
+      • Fight back.
+    media_url: '/img/message-media/step-nineteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Offer truce"
+        postback_data: "en-step_twenty_seven"
+      - type: "reply"
+        text: "Fight back"
+        postback_data: "en-step_eleven"
+  step_twenty:
+    title: "Will-o'-the-Wisps"
+    text: |
+      The glowing lights lead you to a hidden cave entrance beneath the marsh.
+      • Enter the cave cautiously.
+      • Ignore the lights and continue through the marsh.
+    media_url: '/img/message-media/step-twenty.png'
+    suggestions:
+      - type: "reply"
+        text: "Enter the cave"
+        postback_data: "en-step_twenty_eight"
+      - type: "reply"
+        text: "Ignore lights"
+        postback_data: "en-step_twenty_one"
+  step_twenty_one:
+    title: "Quicksand Crossing"
+    text: |
+      You carefully use the rope and manage to cross safely — but you lose time.
+      • Press on toward the Echoing Peaks.
+      • Rest to recover your strength.
+    media_url: '/img/message-media/step-twenty-one.png'
+    suggestions:
+      - type: "reply"
+        text: "Press on"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Rest"
+        postback_data: "en-step_twenty_two"
+  step_twenty_two:
+    title: "Resting Spot"
+    text: |
+      You and your companions rest peacefully. Lira's calming presence soothes your worries, but you sense something watching you from the shadows.
+      • Continue refreshed to the mountain.
+      • Investigate.
+    media_url: '/img/message-media/step-twenty-two.png'
+    suggestions:
+      - type: "reply"
+        text: "Continue to mountain"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Investigate"
+        postback_data: "en-step_twenty_nine"
+  step_twenty_three:
+    title: "Rune Secrets"
+    text: |
+      You discover the runes describe a protective spell that can shield you from shadow magic.
+      • Learn the spell and prepare to use it.
+      • Decide it's too risky and move on.
+    media_url: '/img/message-media/step-twenty-three.png'
+    suggestions:
+      - type: "reply"
+        text: "Learn spell"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Move on"
+        postback_data: "en-step_nine"
+  step_twenty_four:
+    title: "Purification"
+    text: |
+      You cleanse the shrine with light and magic. The shadow beasts flee, never to return.
+      • Continue your journey strengthened.
+      • Gather blessings from the now-pure shrine.
+    media_url: '/img/message-media/step-twenty-four.png'
+    suggestions:
+      - type: "reply"
+        text: "Continue journey"
+        postback_data: "en-step_nine"
+      - type: "reply"
+        text: "Gather blessings"
+        postback_data: "en-step_thirty"
+  step_twenty_five:
+    title: "Fire and Destruction"
+    text: |
+      You burn the shrine, but the ground trembles violently. A hidden cave entrance opens nearby.
+      • Enter the cave cautiously.
+      • Avoid the cave and hurry onward.
+    media_url: '/img/message-media/step-twenty-five.png'
+    suggestions:
+      - type: "reply"
+        text: "Enter cave"
+        postback_data: "en-step_twenty_eight"
+      - type: "reply"
+        text: "Hurry onward"
+        postback_data: "en-step_nine"
+  step_twenty_six:
+    title: "Scout Ahead"
+    text: |
+      You scout the mountain and spot an ancient rune circle — possibly a trap.
+      • Disarm the trap carefully.
+      • Avoid the rune circle and take a longer path.
+    media_url: '/img/message-media/step-twenty-six.png'
+    suggestions:
+      - type: "reply"
+        text: "Disarm trap"
+        postback_data: "en-step_thirty_one"
+      - type: "reply"
+        text: "Take longer path"
+        postback_data: "en-step_thirty_two"
+  step_twenty_seven:
+    title: "Truce"
+    text: |
+      Varnak hesitates, then surrenders the Flame Crystal. Peace is restored without bloodshed.
+      A rare peaceful ending.
+      THE END
+    media_url: '/img/message-media/step-twenty-seven.png'
+  step_twenty_eight:
+    title: "Hidden Cave"
+    text: |
+      Inside the cave, you find an ancient artifact — the Mirror of Truth. It shows your deepest strengths and weaknesses.
+      • Use the Mirror to gain insight.
+      • Ignore the Mirror and focus on the quest.
+    media_url: '/img/message-media/step-twenty-eight.png'
+    suggestions:
+      - type: "reply"
+        text: "Use Mirror"
+        postback_data: "en-step_thirty_three"
+      - type: "reply"
+        text: "Ignore Mirror"
+        postback_data: "en-step_nine"
+  step_twenty_nine:
+    title: "Shadow in the Woods"
+    text: |
+      You discover a small, frightened creature hiding — a lost magical sprite.
+      • Help the sprite. It offers to guide you.
+      • Leave the sprite and continue.
+    media_url: '/img/message-media/step-twenty-nine.png'
+    suggestions:
+      - type: "reply"
+        text: "Help sprite"
+        postback_data: "en-step_thirty_four"
+      - type: "reply"
+        text: "Leave sprite"
+        postback_data: "en-step_nine"
+  step_thirty:
+    title: "Blessings of Light"
+    text: |
+      You gain a temporary shield against dark magic, making you stronger for the final battle.
+      • Proceed confidently.
+    media_url: '/img/message-media/step-thirty.png'
+    suggestions:
+      - type: "reply"
+        text: "Proceed"
+        postback_data: "en-step_nine"
+  step_thirty_one:
+    title: "Trap Disarmed"
+    text: |
+      You successfully disarm the rune trap, making your path safer.
+      • Proceed to face Varnak.
+    media_url: '/img/message-media/step-thirty-one.png'
+    suggestions:
+      - type: "reply"
+        text: "Face Varnak"
+        postback_data: "en-step_nine"
+  step_thirty_two:
+    title: "Longer Path"
+    text: |
+      The longer path delays you, and Varnak gains power.
+      • Rush into battle despite disadvantage.
+    media_url: '/img/message-media/step-thirty-two.png'
+    suggestions:
+      - type: "reply"
+        text: "Battle Varnak"
+        postback_data: "en-step_eleven"
+  step_thirty_three:
+    title: "Mirror's Insight"
+    text: |
+      The Mirror helps you master a new spell just in time for the final battle.
+      • Use the spell against Varnak.
+    media_url: '/img/message-media/step-thirty-three.png'
+    suggestions:
+      - type: "reply"
+        text: "Use spell"
+        postback_data: "en-step_eleven"
+  step_thirty_four:
+    title: "Sprite's Guidance"
+    text: |
+      The sprite leads you safely past traps and reveals a hidden route to surprise Varnak.
+      • Use the hidden route.
+    media_url: '/img/message-media/step-thirty-four.png'
+    suggestions:
+      - type: "reply"
+        text: "Use hidden route"
+        postback_data: "en-step_eleven"
 fr:
   step_zero:
-    title: "Petite question"
-    text: "Aimez-vous cette image?"
-    media_url: '/img/NationalGeographic_2572187_16x9.jpg'
+    title: "An answer is needed"
+    text: |
+      La reine Elira te regarde gravement. « Le destin d'Eldrathia repose entre tes mains. Acceptes-tu cette quête ? »
+      • Accepter la quête et partir avec Lira et Tharos vers les Pics de l'Écho.
+      • Demander plus de temps pour te préparer avant de partir.
+      • Refuser la quête — c'est trop dangereux.
+    media_url: '/img/message-media/step-zero.png'
     suggestions:
       - type: "reply"
-        text: "Oui"
-        postback_data: "fr-step_one"
+        text: "Accepter la quête"
+        postback_data: "en-step_one"
       - type: "reply"
-        text: "Non"
-        postback_data: "fr-step_two"
+        text: "Demander plus de temps"
+        postback_data: "en-step_twelve"
+      - type: "reply"
+        text: "Refuser la quête"
+        postback_data: "en-step_two"
   step_one:
-    title: "Super!"
-    text: "Je suis content que ça vous plaise ! En voici une autre."
-    media_url: '/img/black-dragon-at-beach.jpg'
-  step_two:
-    title: "Vraiment?"
-    text: "C'est une belle image ! N'est-ce pas?"
-    media_url: '/img/NationalGeographic_2572187_16x9.jpg'
+    title: "Dans la nature sauvage"
+    text: |
+      Tu commences ton voyage avec Lira la licorne et Tharos le dragon. Tu arrives à un embranchement.
+      • À gauche : À travers la Forêt d'Argent, où les illusions piègent les voyageurs.
+      • À droite : Par les Falaises Venteuses, où les tempêtes ne cessent jamais.
+      • Tout droit : À travers les Marais Brumeux, qui cachent des chemins secrets.
+    media_url: '/img/message-media/step-one.png'
     suggestions:
       - type: "reply"
-        text: "Oui"
+        text: "Forêt d'Argent"
+        postback_data: "fr-step_trois"
+      - type: "reply"
+        text: "Falaises Venteuses"
+        postback_data: "fr-step_four"
+      - type: "reply"
+        text: "Marais Brumeux"
+        postback_data: "fr-step_thirteen"
+  step_two:
+    title: "Le choix du lâche"
+    text: |
+      Tu refuses. Les yeux de la reine s'assombrissent.
+      Cette nuit-là, les ombres de Varnak envahissent le château. Sans héros, la terre tombe en ruine.
+      Tu survies, mais Eldrathia non.
+      FIN
+      Veux-tu réessayer ?
+    media_url: '/img/message-media/step-two.png'
+    suggestions:
+      - type: "reply"
+        text: "Retour au début"
+        postback_data: "fr-step_zero"
+  step_three:
+    title: "Forêt d'Argent"
+    text: |
+      Les arbres chuchotent tes peurs. Tu vois des visions de tes pires souvenirs.
+      • Utiliser la corne de Lira pour dissiper les illusions.
+      • Combattre les visions avec ta magie.
+      • Fermer les yeux et faire confiance à Tharos pour te guider.
+    media_url: '/img/message-media/step-three.png'
+    suggestions:
+      - type: "reply"
+        text: "Utiliser la corne"
+        postback_data: "fr-step_five"
+      - type: "reply"
+        text: "Combattre avec magie"
+        postback_data: "fr-step_six"
+      - type: "reply"
+        text: "Faire confiance à Tharos"
+        postback_data: "fr-step_fourteen"
+  step_four:
+    title: "Falaises Venteuses"
+    text: |
+      Le vent hurle autour de toi. Tharos a du mal à voler.
+      Soudain, des créatures d'ombre attaquent du ciel.
+      • Laisser Tharos combattre pendant que tu lances des sorts de protection.
+      • Essayer de commander le vent avec un sort interdit.
+      • Atterrir rapidement et se cacher dans une grotte proche jusqu’à ce que la tempête passe.
+    media_url: '/img/message-media/step-four.png'
+    suggestions:
+      - type: "reply"
+        text: "Tharos combat"
+        postback_data: "fr-step_seven"
+      - type: "reply"
+        text: "Sort interdit"
+        postback_data: "fr-step_eight"
+      - type: "reply"
+        text: "Se cacher"
+        postback_data: "fr-step_fifteen"
+  step_five:
+    title: "Lumière de vérité"
+    text: |
+      La corne de Lira brille d'une lumière pure. Les illusions se brisent.
+      Tu retrouves ta détermination. Le chemin est clair.
+      • Continuer vers les Pics de l'Écho.
+      • Faire une pause pour cueillir des herbes magiques qui pourraient aider plus tard.
+    media_url: '/img/message-media/step-five.png'
+    suggestions:
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Cueillir des herbes"
+        postback_data: "fr-step_sixteen"
+  step_six:
+    title: "Retour de flamme magique"
+    text: |
+      Tu lances un sort — mais la forêt te le renvoie ! Tu es piégé dans ta pire peur, en boucle infinie.
+      FIN
+      Veux-tu essayer un autre chemin ?
+    media_url: '/img/message-media/step-six.png'
+    suggestions:
+      - type: "reply"
+        text: "Retour à la Forêt"
+        postback_data: "fr-step_three"
+  step_seven:
+    title: "Duel aérien"
+    text: |
+      Tharos crache du feu, et tu protèges le groupe avec tes sorts. Les bêtes d'ombre fuient.
+      Tharos te regarde avec respect. « Tu es plus courageux que tu ne le sembles. »
+      • Continuer vers la montagne.
+      • S'arrêter pour enquêter sur l'origine des bêtes d'ombre
+    media_url: '/img/message-media/step-seven.png'
+    suggestions:
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Enquêter"
+        postback_data: "fr-step_seventeen"
+  step_eight:
+    title: "Magie interdite"
+    text: |
+      Tu récites une ancienne incantation. Le vent t'obéit — mais tu perds un fragment de ton âme.
+      Tu arrives à la montagne, mais tu te sens... vide.
+      • Essayer de raviver ton esprit avec l'aide de Lira.
+      • Continuer malgré ce sens de vide.
+    media_url: '/img/message-media/step-eight.png'
+    suggestions:
+      - type: "reply"
+        text: "Raviver l'esprit"
+        postback_data: "fr-step_eighteen"
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+  step_nine:
+    title: "Les Pics de l'Écho"
+    text: |
+      Enfin, tu atteins la montagne. Le Cristal de Flamme pulse à l'intérieur.
+      Mais Varnak apparaît dans un tourbillon d'ombre !
+      • Laisser Lira charger Varnak pendant que tu récupères le cristal.
+      • Affronter Varnak directement pendant que Tharos le distrait.
+      • Tenter de négocier avec Varnak, en appelant à son humanité restante.
+    media_url: '/img/message-media/step-nine.png'
+    suggestions:
+      - type: "reply"
+        text: "Lira charge"
+        postback_data: "fr-step_ten"
+      - type: "reply"
+        text: "Affronter Varnak"
+        postback_data: "fr-step_eleven"
+      - type: "reply"
+        text: "Négocier"
+        postback_data: "fr-step_nineteen"
+  step_ten:
+    title: "Le courage de la licorne"
+    text: |
+      Lira charge courageusement — mais Varnak est trop fort. Il la frappe.
+      Tu saisis le cristal et lances un sort désespéré. La Flamme Sacrée se rallume… mais Lira est perdue.
+      Eldrathia est sauvée, mais au prix fort.
+      FIN
+    media_url: '/img/message-media/step-ten.png'
+  step_eleven:
+    title: "Dernier combat"
+    text: |
+      Tu tiens bon. Varnak lance sa magie noire. Tharos vole au-dessus, crachant du feu.
+      Tu canalises la puissance du Cristal de Flamme et cries l'incantation ancienne.
+      Une lumière aveuglante jaillit. Varnak hurle — et est banni pour toujours.
+      Lira et Tharos sont à tes côtés. La terre est sauvée, et tu es célébré comme un vrai mage d'Eldrathia.
+      ✨ Victoire ! ✨
+      FIN
+    media_url: '/img/message-media/step-eleven.png'
+  step_twelve:
+    title: "Temps de préparation"
+    text: |
+      Tu demandes du temps pour te préparer. La reine Elira t'offre trois choix pour ton équipement :
+      • Prendre des potions supplémentaires de soin et de force.
+      • Rassembler des parchemins anciens de sorts puissants.
+      • Demander une carte magique révélant les dangers cachés.
+    media_url: '/img/message-media/step-twelve.png'
+    suggestions:
+      - type: "reply"
+        text: "Potions"
         postback_data: "fr-step_one"
       - type: "reply"
-        text: "Non"
-        postback_data: "fr-step_two"
+        text: "Parchemins"
+        postback_data: "fr-step_one"
+      - type: "reply"
+        text: "Carte magique"
+        postback_data: "fr-step_one"
+  step_thirteen:
+    title: "Marais Brumeux"
+    text: |
+      Les marais sont épais de brouillard et de sons étranges.
+      • Suivre les feux-follets lumineux pour trouver un raccourci.
+      • Utiliser une corde pour traverser prudemment les zones de sable mouvant.
+      • Demander à Tharos de survoler les marais.
+    media_url: '/img/message-media/step-thirteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Suivre les feux-follets"
+        postback_data: "fr-step_twenty"
+      - type: "reply"
+        text: "Traverser avec corde"
+        postback_data: "fr-step_twenty_one"
+      - type: "reply"
+        text: "Survoler les marais"
+        postback_data: "fr-step_four"
+  step_fourteen:
+    title: "Confiance en Tharos"
+    text: |
+      Tu fermes les yeux et fais confiance à l'instinct de Tharos. Avec un rugissement puissant, il te guide en sécurité.
+      • Remercier Tharos et continuer.
+      • Proposer de se reposer dans une clairière proche.
+    media_url: '/img/message-media/step-fourteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Se reposer"
+        postback_data: "fr-step_twenty_two"
+  step_fifteen:
+    title: "Abri-tempête"
+    text: |
+      Tu trouves une grotte cachée. À l'intérieur, des runes anciennes brillent faiblement sur les murs.
+      • Étudier les runes pour un savoir magique.
+      • Se reposer jusqu'à la fin de la tempête.
+    media_url: '/img/message-media/step-fifteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Étudier les runes"
+        postback_data: "fr-step_twenty_three"
+      - type: "reply"
+        text: "Se reposer"
+        postback_data: "fr-step_nine"
+  step_sixteen:
+    title: "Récolte d'herbes"
+    text: |
+      Tu cueilles des herbes rares qui renforcent la magie.
+      • Utiliser les herbes pour améliorer tes sorts maintenant.
+      • Garder les herbes pour plus tard.
+    media_url: '/img/message-media/step-sixteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Améliorer les sorts"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Garder pour plus tard"
+        postback_data: "fr-step_nine"
+  step_seventeen:
+    title: "Origine de l'ombre"
+    text: |
+      Tu suis les bêtes d'ombre jusqu'à un sanctuaire maudit.
+      • Tenter de purifier le sanctuaire avec un sort de lumière.
+      • Détruire le sanctuaire avec le feu de Tharos.
+    media_url: '/img/message-media/step-seventeen.png'
+    suggestions:
+      - type: "reply"
+        text: "Purifier le sanctuaire"
+        postback_data: "fr-step_twenty_four"
+      - type: "reply"
+        text: "Détruire le sanctuaire"
+        postback_data: "fr-step_twenty_five"
+  step_eighteen:
+    title: "Renouveau"
+    text: |
+      Le toucher de Lira ravive ton esprit qui faiblissait.
+      • Affronter Varnak avec force renouvelée.
+      • Ressentir de la gratitude mais prudence, explorer la montagne d'abord.
+    media_url: '/img/message-media/step-eighteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Affronter Varnak"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Explorer la montagne"
+        postback_data: "fr-step_twenty_six"
+  step_nineteen:
+    title: "Négociation"
+    text: |
+      Tu parles à Varnak, appelant au mage qu'il fut autrefois. Il rit et attaque sans pitié.
+      • Proposer une trêve et la remise du Cristal de Flamme.
+      • Combattre.
+    media_url: '/img/message-media/step-nineteen.png'
+    suggestions:
+      - type: "reply"
+        text: "Proposer une trêve"
+        postback_data: "fr-step_twenty_seven"
+      - type: "reply"
+        text: "Combattre"
+        postback_data: "fr-step_eleven"
+  step_twenty:
+    title: "Feux-follets"
+    text: |
+      Les lumières brillantes te conduisent à l'entrée d'une grotte cachée sous le marais.
+      • Entrer prudemment dans la grotte.
+      • Ignorer les lumières et continuer à travers le marais.
+    media_url: '/img/message-media/step-twenty.png'
+    suggestions:
+      - type: "reply"
+        text: "Entrer dans la grotte"
+        postback_data: "fr-step_twenty_eight"
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_twenty_one"
+  step_twenty_one:
+    title: "Traversée du sable mouvant"
+    text: |
+      Tu utilises la corde avec précaution et traverses en sécurité — mais tu perds du temps.
+      • Continuer vers les Pics de l'Écho.
+      • Se reposer pour récupérer des forces.
+    media_url: '/img/message-media/step-twenty-one.png'
+    suggestions:
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Se reposer"
+        postback_data: "fr-step_twenty_two"
+  step_twenty_two:
+    title: "Repos"
+    text: |
+      Vous vous reposez paisiblement. La présence apaisante de Lira calme tes inquiétudes mais tu sens quelque chose qui t'observe dans l'ombre.
+      • Continuer revigoré vers la montagne.
+      • Enquêter la chose dans l'ombre.
+    media_url: '/img/message-media/step-twenty-two.png'
+    suggestions:
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Enquêter"
+        postback_data: "fr-step_twenty_nine"
+  step_twenty_three:
+    title: "Secrets des runes"
+    text: |
+      Tu découvres que les runes décrivent un sort protecteur contre la magie des ombres.
+      • Apprendre le sort et s'y préparer.
+      • Décider que c'est trop risqué et continuer
+    media_url: '/img/message-media/step-twenty-three.png'
+    suggestions:
+      - type: "reply"
+        text: "Apprendre le sort"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+  step_twenty_four:
+    title: "Purification"
+    text: |
+      Tu purifies le sanctuaire avec lumière et magie. Les bêtes d'ombre fuient, ne revenant jamais.
+      • Continuer renforcé dans ton voyage.
+      • Recevoir les bénédictions du sanctuaire.
+    media_url: '/img/message-media/step-twenty-four.png'
+    suggestions:
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+      - type: "reply"
+        text: "Recevoir bénédiction"
+        postback_data: "fr-step_thirty"
+  step_twenty_five:
+    title: "Feu et destruction"
+    text: |
+      Tu brûles le sanctuaire, mais la terre tremble violemment. Une entrée secrète s'ouvre près de là.
+      • Entrer prudemment dans la grotte.
+      • Éviter la grotte et se hâter.
+    media_url: '/img/message-media/step-twenty-five.png'
+    suggestions:
+      - type: "reply"
+        text: "Entrer"
+        postback_data: "fr-step_twenty_eight"
+      - type: "reply"
+        text: "Se hâter"
+        postback_data: "fr-step_nine"
+  step_twenty_six:
+    title: "Exploration"
+    text: |
+      Tu découvres un cercle de runes anciennes — peut-être un piège.
+      • Désarmer le piège avec soin.
+      • Éviter le cercle et prendre un chemin plus long.
+    media_url: '/img/message-media/step-twenty-six.png'
+    suggestions:
+      - type: "reply"
+        text: "Désarmer le piège"
+        postback_data: "fr-step_thirty_one"
+      - type: "reply"
+        text: "Éviter le cercle"
+        postback_data: "fr-step_thirty_two"
+  step_twenty_seven:
+    title: "Trêve"
+    text: |
+      Varnak hésite, puis remet le Cristal de Flamme. La paix revient sans verser de sang.
+      Une fin rare et pacifique.
+      FIN
+    media_url: '/img/message-media/step-twenty-seven.png'
+  step_twenty_eight:
+    title: "Grotte cachée"
+    text: |
+      Dans la grotte, tu trouves un ancien artefact — le Miroir de Vérité. Il montre tes forces et faiblesses profondes.
+      • Utiliser le Miroir pour gagner en sagesse.
+      • Ignorer le Miroir et se concentrer sur la quête.
+    media_url: '/img/message-media/step-twenty-eight.png'
+    suggestions:
+      - type: "reply"
+        text: "Utiliser le Miroir"
+        postback_data: "fr-step_thirty_three"
+      - type: "reply"
+        text: "Ignorer le Miroir"
+        postback_data: "fr-step_nine"
+  step_twenty_nine:
+    title: "Ombre dans les bois"
+    text: |
+      Tu découvres une petite créature effrayée — un sprite magique perdu.
+      • Aider le sprite. Il propose de te guider.
+      • Laisser le sprite et continuer.
+    media_url: '/img/message-media/step-twenty-nine.png'
+    suggestions:
+      - type: "reply"
+        text: "Aider le sprite"
+        postback_data: "fr-step_thirty_four"
+      - type: "reply"
+        text: "Continuer"
+        postback_data: "fr-step_nine"
+  step_thirty:
+    title: "Bénédictions de lumière"
+    text: |
+      Tu gagnes un bouclier temporaire contre la magie noire, te rendant plus fort pour le combat final.
+      • Avancer confiant.
+    media_url: '/img/message-media/step-thirty.png'
+    suggestions:
+      - type: "reply"
+        text: "Avancer"
+        postback_data: "fr-step_nine"
+  step_thirty_one:
+    title: "Piège désamorcé"
+    text: |
+      Tu désarmes avec succès le piège de runes, sécurisant ton chemin.
+      • Avancer pour affronter Varnak.
+    media_url: '/img/message-media/step-thirty-one.png'
+    suggestions:
+      - type: "reply"
+        text: "Avancer"
+        postback_data: "fr-step_nine"
+  step_thirty_two:
+    title: "Chemin plus long"
+    text: |
+      Le chemin plus long te ralentit, et Varnak gagne en puissance.
+      • Te précipiter au combat malgré le désavantage.
+    media_url: '/img/message-media/step-thirty-two.png'
+    suggestions:
+      - type: "reply"
+        text: "Combattre Varnak"
+        postback_data: "fr-step_eleven"
+  step_thirty_three:
+    title: "Sagesse du miroir"
+    text: |
+      Le Miroir t'aide à maîtriser un nouveau sort juste à temps pour le combat final.
+      • Utiliser ce sort contre Varnak.
+    media_url: '/img/message-media/step-thirty-three.png'
+    suggestions:
+      - type: "reply"
+        text: "Utiliser le sort"
+        postback_data: "fr-step_eleven"
+  step_thirty_four:
+    title: "Guide du sprite"
+    text: |
+      Le sprite te conduit en sécurité à travers pièges et révèle un chemin secret pour surprendre Varnak.
+      • Utiliser ce chemin secret.
+    media_url: '/img/message-media/step-thirty-four.png'
+    suggestions:
+      - type: "reply"
+        text: "Chemin secret"
+        postback_data: "fr-step_eleven"

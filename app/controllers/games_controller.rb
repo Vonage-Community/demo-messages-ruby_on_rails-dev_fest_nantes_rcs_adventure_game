@@ -8,7 +8,6 @@ class GamesController < ApplicationController
   end
 
   def create
-    p 'Starting game for player: ' + session[:name]
     message = MessagesCreator.new("#{I18n.locale.to_s}-step_zero").create_message
 
     Vonage.messaging.send(

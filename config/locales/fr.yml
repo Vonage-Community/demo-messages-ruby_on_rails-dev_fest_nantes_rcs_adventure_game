@@ -28,4 +28,19 @@
 #       enabled: "ON"
 
 fr:
-  hello: "Bonjour le monde"
+  new_player:
+    new_quest: "Préparez-vous pour une nouvelle quête!"
+    intro_paragraph: "Vous êtes sur le point de vous lancer dans une aventure passionnante! En utilisant la magie de la messagerie RCS via l'API Vonage Messages, vous partirez en quête dans le royaume d'Eldrathia."
+    enter_name: "Veuillez entrer votre nom pour créer un nouveau joueur:"
+    name: "Nom"
+    create_player: "Créer un joueur"
+  new_game:
+    start_quest: "Commencez votre quête!"
+    intro_paragraph_one_part_one_html: "Vous êtes"
+    intro_paragraph_one_part_two_html: "un jeune apprenti sorcier dans le royaume mystique de <strong>Eldrathia</strong>. La Flamme Sacrée, source de vie et de magie dans le pays, a été éteint par le sorcier maléfique <strong>Varnak</strong>."
+    intro_paragraph_two_html: "<strong>La Reine Elira</strong> fait appel à vous, un licorne nommé <strong>Lira</strong>, et un dragon nommé <strong>Tharos</strong> pour récupérer le <strong>Cristal de Flamme</strong>, caché dans les Echoing Peaks."
+    intro_paragraph_three_html: "Allez-vous restaurer La Flamme Sacrée — ou les ténèbres vont-elles consumer Eldrathia?"
+    start_game: "Commencer la quête"
+  show_game:
+    quest_started: "Votre quête a commencé!"
+    intro_paragraph_html: "Vous recevrez bientôt un message secret avec votre premier défi. Bonne chance, brave aventurier!"

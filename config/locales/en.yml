@@ -28,4 +28,19 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  new_player:
+    new_quest: "Get ready for a new quest!"
+    intro_paragraph_html: "You are about to embark on an exciting adventure! Using the magic of RCS messaging via the Vonage Messages API, you will go on a quest in the kingdom of Eldrathia."
+    enter_name_html: "Please enter your name to create a new player:"
+    name: "Name"
+    create_player: "Create Player"
+  new_game:
+    start_quest: "Start Your Quest!"
+    intro_paragraph_one_part_one_html: "You are"
+    intro_paragraph_one_part_two_html: "a young wizard apprentice in the mystical kingdom of <strong>Eldrathia</strong>. The Heartfire, source of life and magic in the land, has been extinguished by the evil sorcerer <strong>Varnak</strong>."
+    intro_paragraph_two_html: "<strong>Queen Elira</strong> calls upon you, a unicorn named <strong>Lira</strong>, and a dragon named <strong>Tharos</strong> to recover the <strong>Flame Crystal</strong>, hidden in the Echoing Peaks."
+    intro_paragraph_three_html: "Will you restore the Heartfire — or will darkness consume Eldrathia?"
+    start_game: "Start Quest"
+  show_game:
+    quest_started: "Your quest has begun!"
+    intro_paragraph_html: "You will receive a secret message shortly with your first challenge. Good luck, brave adventurer!"
