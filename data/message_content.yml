@@ -483,7 +483,7 @@ en:
         postback_data: "en-step_eleven"
 fr:
   step_zero:
-    title: "An answer is needed"
+    title: "Une réponse est demandée"
     text: |
       La reine Elira te regarde gravement. « Le destin d'Eldrathia repose entre tes mains. Acceptes-tu cette quête ? »
       • Accepter la quête et partir avec Lira et Tharos vers les Pics de l'Écho.

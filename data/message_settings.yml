@@ -1,0 +1,7 @@
+standard_params:
+  media_height: "TALL"
+  media_force_refresh: false
+card_opts:
+  rcs:
+    card_orientation: "VERTICAL"
+    image_alignment: "RIGHT"

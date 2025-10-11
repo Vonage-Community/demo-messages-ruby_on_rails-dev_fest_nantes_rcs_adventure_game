@@ -8,20 +8,20 @@ class MessagesCreator
   def create_message
     Vonage.messaging.rcs(
       type: 'card',
-      message: card_content,
-      opts: card_opts
+      message: message_content,
+      opts: message_opts
     )
   end
 
   private
 
-  def card_content
-    content = message_content
+  def message_content
+    content = card_content
     set_base_url_for_media_params(content)
     content.merge(standard_params)
   end
   
-  def message_content
+  def card_content
     content_lang = data_id.split('-').first
     content_step = data_id.split('-').last
     parse_yaml('message_content.yml')[content_lang][content_step]
@@ -32,19 +32,11 @@ class MessagesCreator
   end
 
   def standard_params
-    {
-      media_height: "TALL",
-      media_force_refresh: false
-    }
+    parse_yaml('message_settings.yml')['standard_params']
   end
 
-  def card_opts
-    {
-      rcs: {
-        card_orientation: "VERTICAL",
-        image_alignment: "RIGHT"
-      }
-    }
+  def message_opts
+    parse_yaml('message_settings.yml')['card_opts']
   end
 
   def set_base_url_for_media_params(content)
