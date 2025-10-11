@@ -2,12 +2,12 @@ require "test_helper"
 
 class GamesControllerTest < ActionDispatch::IntegrationTest
   test "should get show" do
-    get games_show_url(id: 'TestPlayer')
+    get game_url(locale: :fr, id: 'TestPlayer')
     assert_response :success
   end
 
   test "should get new" do
-    get games_new_url
+    get new_game_url(locale: :fr)
     assert_response :success
   end
 end
