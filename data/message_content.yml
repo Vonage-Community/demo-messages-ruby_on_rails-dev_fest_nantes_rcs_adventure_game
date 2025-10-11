@@ -47,7 +47,7 @@ en:
     suggestions:
       - type: "reply"
         text: "Return to Start"
-        postback_data: "en-step_one"
+        postback_data: "en-step_zero"
   step_three:
     title: "Silver Forest"
     text: |
@@ -493,13 +493,13 @@ fr:
     suggestions:
       - type: "reply"
         text: "Accepter la quête"
-        postback_data: "en-step_one"
+        postback_data: "fr-step_one"
       - type: "reply"
         text: "Demander plus de temps"
-        postback_data: "en-step_twelve"
+        postback_data: "fr-step_twelve"
       - type: "reply"
         text: "Refuser la quête"
-        postback_data: "en-step_two"
+        postback_data: "fr-step_two"
   step_one:
     title: "Dans la nature sauvage"
     text: |
