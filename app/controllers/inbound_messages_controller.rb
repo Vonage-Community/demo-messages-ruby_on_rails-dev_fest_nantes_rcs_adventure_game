@@ -6,8 +6,8 @@ class InboundMessagesController < ApplicationController
     message = MessagesCreator.new(reply_id).create_message
 
     Vonage.messaging.send(
-      from: ENV['RCS_SENDER_ID'],
-      to: ENV['MESSAGES_TO_NUMBER'],
+      from: ENV["RCS_SENDER_ID"],
+      to: ENV["MESSAGES_TO_NUMBER"],
       **message
     )
     head :ok
