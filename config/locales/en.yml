@@ -31,7 +31,7 @@ en:
   new_player:
     new_quest: "Get ready for a new quest!"
     intro_paragraph_html: "You are about to embark on an exciting adventure! Using the magic of RCS messaging via the Vonage Messages API, you will go on a quest in the kingdom of Eldrathia."
-    enter_name_html: "Please enter your name to create a new player:"
+    enter_name_html: "Please enter a name to create a new player:"
     name: "Name"
     create_player: "Create Player"
   new_game:

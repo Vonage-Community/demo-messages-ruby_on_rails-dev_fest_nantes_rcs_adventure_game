@@ -16,20 +16,38 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
-    <div>
+     <header>
+      <div class="header-container">
+        <div>
+          <a href="/">
+            <picture>
+              <img src="/img/site-content/VonageLogo_Primary_White.png" alt="Vonage logo">
+            </picture>
+          </a>
+        </div>
+        <div>
+          <blockquote>
+            <p>Code that connects you with anyone, anywhere and anytime.</p>
+          </blockquote>
+        </div>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
       <% if I18n.locale == I18n.default_locale %>
         <%= link_to "English", { :locale=>'en' } %>
       <% else %>
         <%= link_to "Français", { :locale=>'fr' } %>
       <%end%>
-    </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,53 @@
+mark.alert {
+  background-color: #f15656;
+  color: #ffffff;
+}
+
+button.action {
+  background-color: #6f539f;
+  border-color: #6f539f;
+  color: #ffffff;
+}
+
+button.action:hover {
+  background-color: #8574a3;
+  border-color: #8574a3;
+  color: #ffffff;
+}
+
+button.alert {
+  background-color: #d42d90;
+  border-color: #d42d90;
+  color: #ffffff;
+}
+
+button.alert:hover {
+  background-color: #d471ad;
+  border-color: #d471ad;
+  color: #ffffff;
+}
+
+.header-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header-container picture {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #212121;
+  --accent-bg: #2b2b2b;
+  --text: #dcdcdc;
+  --text-light: #ababab;
+  --accent: #7FC5EA;
+  --accent-hover: #ffe099;
+  --accent-text: var(--bg);
+  --code: #f06292;
+  --preformatted: #ccc;
+  --disabled: #111;
+}
