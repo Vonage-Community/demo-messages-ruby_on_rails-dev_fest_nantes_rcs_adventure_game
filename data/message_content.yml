@@ -24,7 +24,7 @@ en:
       • Left: Through the Silver Forest, where illusions trick travelers.
       • Right: Over the Windblown Cliffs, where storms never cease.
       • Straight ahead: Across the Misty Marshes, said to hide secret paths.
-    media_url: '/img/message-media/step-one.png'
+    media_url: '/img/message-media/step-one.jpg'
     suggestions:
       - type: "reply"
         text: "Silver Forest"
@@ -507,7 +507,7 @@ fr:
       • À gauche : À travers la Forêt d'Argent, où les illusions piègent les voyageurs.
       • À droite : Par les Falaises Venteuses, où les tempêtes ne cessent jamais.
       • Tout droit : À travers les Marais Brumeux, qui cachent des chemins secrets.
-    media_url: '/img/message-media/step-one.png'
+    media_url: '/img/message-media/step-one.jpg'
     suggestions:
       - type: "reply"
         text: "Forêt d'Argent"
