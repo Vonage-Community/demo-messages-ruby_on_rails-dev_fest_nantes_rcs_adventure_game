@@ -511,7 +511,7 @@ fr:
     suggestions:
       - type: "reply"
         text: "Forêt d'Argent"
-        postback_data: "fr-step_trois"
+        postback_data: "fr-step_three"
       - type: "reply"
         text: "Falaises Venteuses"
         postback_data: "fr-step_four"
