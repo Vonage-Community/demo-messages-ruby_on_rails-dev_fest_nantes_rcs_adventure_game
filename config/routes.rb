@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   scope "/:locale" do
-    resources :games, only: %i[new create show]
-    resources :players, only: %i[new create]
+    resources :players, only: %i[new create] do
+      resources :games, only: %i[new create show]
+    end
   end
   resources :inbound_messages, only: %i[create]
   resources :status_messages, only: %i[create]

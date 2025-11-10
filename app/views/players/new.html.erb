@@ -1,7 +1,7 @@
 <h1><%= t "new_player.new_quest" %></h1>
 <p><%= t "new_player.intro_paragraph_html" %></p>
 <p><%= t "new_player.enter_name_html" %></p>
-<%= form_with url: players_path do |form| %>
+<%= form_with model: @player do |form| %>
   <%= form.label :name, "#{t "new_player.name"}" %>
   <%= form.text_field :name, required: true %>
   <%= form.submit "#{t "new_player.create_player"}" %>
