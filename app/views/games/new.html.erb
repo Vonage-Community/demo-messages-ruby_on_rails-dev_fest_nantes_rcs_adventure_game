@@ -3,9 +3,9 @@
   <img src="/img/site-content/start-game.png" alt="Start game">
 </picture>
 
-<p><%= t "new_game.intro_paragraph_one_part_one_html" %> <strong><%= @name %></strong>, <%= t "new_game.intro_paragraph_one_part_two_html" %></p>
+<p><%= t "new_game.intro_paragraph_one_part_one_html" %> <strong><%= @player.name %></strong>, <%= t "new_game.intro_paragraph_one_part_two_html" %></p>
 <p><%= t "new_game.intro_paragraph_two_html" %></p>
 <p><%= t "new_game.intro_paragraph_three_html" %></p>
-<%= form_with url: games_path do |form| %>
+<%= form_with model: [@player, @game] do |form| %>
   <%= form.submit "#{t "new_game.start_game"}" %>
 <% end %>
